@@ -1,6 +1,6 @@
 # Formulário de Cadastro
 
-![Tela-Inicial](../formulario/public/cadastro-vazio.png)
+![Tela-Inicial](./src/../public/cadastro-vazio.png)
 
 
 ## Descrição <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bookmark%20Tabs.png" alt="Bookmark Tabs" width="25" height="25" />
@@ -12,9 +12,9 @@
 
 ## Demostração do Layout <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Window.png" alt="Window" width="25" height="25" /> 
 
-![Tela-Funcional](../formulario/public/cadastro-info.png)
+![Tela-Funcional](./src/../public/cadastro-info.png)
 
-![Tela-Funcional](../formulario/public/cartao-final.png)
+![Tela-Funcional](./src/../public/cartao-final.png)
 
 ## Como Utilizar <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Keyboard.png" alt="Keyboard" width="25" height="25" style="margin-left: 10px;"  />
 
