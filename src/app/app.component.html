@@ -1,0 +1,102 @@
+<div class="container">
+
+    <form class="form" (ngSubmit)="cardVisita()" *ngIf="!exibirTela">
+        <h1 class="title">Cadastro Cartão de Visitas</h1>
+
+        <div class="form-group">
+            <input id="nome" type="text" [(ngModel)]="nome" name="nome" class="input" placeholder="Nome Completo" required />
+        </div>
+
+        <div class="form-group">
+            <input id="idade" type="number" [(ngModel)]="idade" name="idade" class="input" placeholder="Idade"
+                required />
+        </div>
+
+        <div class="form-group">
+            <input id="telefone" type="number" [(ngModel)]="telefone" name="telefone" class="input"
+                placeholder="Telefone" required />
+        </div>
+
+        <div class="form-group">
+            <input id="email" type="email" [(ngModel)]="email" name="email" class="input" placeholder="Email"
+                required />
+        </div>
+
+        <div class="form-group">
+            <input id="endereco" type="text" [(ngModel)]="endereco" name="endereco" class="input" placeholder="Endereço"
+                required />
+        </div>
+
+        <div class="form-group">
+            <input id="numero" type="number" [(ngModel)]="numeroResidencial" name="numeroResidencial" class="input"
+                placeholder="N° Residencial" required />
+        </div>
+
+        <div class="form-group">
+            <input id="bairro" type="text" [(ngModel)]="bairro" name="bairro" class="input" placeholder="Bairro"
+                required />
+        </div>
+
+        <div class="form-group">
+            <input id="cidade" type="text" [(ngModel)]="cidade" name="cidade" class="input" placeholder="Cidade"
+                required />
+        </div>
+
+        <button type="submit" class="submit">Cadastrar</button>
+    </form>
+
+
+
+    <div class="cartao" *ngIf="exibirTela">
+
+        <h2>Cartão de Visitas</h2>
+
+
+        <div class="info-container">
+            <div class="info-item">
+                <label for="nome">Nome <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg></label>
+                <p class="info">{{nome}}</p>
+            </div>
+
+
+            <div class="info-item">
+                <label for="idade">Idade <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"/></svg></label>
+                <p class="info">{{idade}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="telefone">Telefone <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></label>
+                <p class="info">{{telefone}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="email">E-mail <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></label>
+                <p class="info">{{email}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="endereco">Endereço <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></label>
+                <p class="info">{{endereco}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="numero">Número Residencial <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></label>
+                <p class="info">{{numeroResidencial}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="bairro">Bairro <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></label>
+                <p class="info">{{bairro}}</p>
+            </div>
+
+            <div class="info-item">
+                <label for="cidade">Cidade <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152l0 270.8c0 9.8-6 18.6-15.1 22.3L416 503l0-302.6zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6l0 251.4L32.9 502.7C17.1 509 0 497.4 0 480.4L0 209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77l0 249.3L192 449.4 192 255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg></label>
+                <p class="info">{{cidade}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="newBtn" *ngIf="newBtn">
+    <button  (click)="novoFormulario()">Novo Formulário</button>
+</div>
+
